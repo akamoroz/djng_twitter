@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% load twi_fc %}
+{% get_mentions for "apatrushev" as tweets %}
+<ul>
+    {% tree tweets %}
+        {% comment %}
+
+        {% endcomment %}
+        <em>{{ item.id }} :: {{ item.user.screen_name }}: </em>{{ item.text }}
+
+    {% endtree %}
+</ul>
+
+</body>
+</html>
