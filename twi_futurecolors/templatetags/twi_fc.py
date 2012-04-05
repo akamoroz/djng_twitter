@@ -76,15 +76,6 @@ def get_mentions(context, username, asvar):
 
     tweets = []
 
-    def check_tweet_in_tree(tweet, tree):
-        for tw in tree:
-            if isinstance(tw,list):
-                check_tweet_in_tree(tweet, tw)
-            elif tweet.id == tw.id:
-                return True
-            else:
-                return False
-
     for tweet in user_last_tweets:
         if tweet.in_reply_to_status_id:
             tree = None
