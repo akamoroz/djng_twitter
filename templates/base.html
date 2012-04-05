@@ -6,13 +6,16 @@
 </head>
 <body>
 {% load twi_fc %}
+{% load tree %}
 {% get_mentions for "futurecolors" as tweets %}
 <ul>
+{{ tweets }}
     {% tree tweets %}
         {% comment %}
 
         {% endcomment %}
-        <em>{{ item.id }} :: {{ item.user.screen_name }}: </em>{{ item.text }}
+        {{ item }}
+        <em>{{ item.id }} :: {{ item.user.screen_name }}: </em>{{ item.text }} // {{ item.user_mentions }}
 
     {% endtree %}
 </ul>

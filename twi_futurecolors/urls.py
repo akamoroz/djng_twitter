@@ -5,6 +5,6 @@ __author__ = 'akamoroz'
 
 
 urlpatterns = patterns('',
-                        (r'^tag/$', BaseView.as_view()),
+                        (r'^$', BaseView.as_view()),
                         (r'^(?P<username>\w+)/$', 'twi_futurecolors.views.search_mentions'),
                        )

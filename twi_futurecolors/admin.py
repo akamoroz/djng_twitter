@@ -1,13 +1,13 @@
 from django.contrib import admin
-from twi_futurecolors.models import Tweet, TwMention
+from twi_futurecolors.models import Tweet, TwUser
 
 __author__ = 'akamoroz'
 
 class TweetAdmin(admin.ModelAdmin):
     pass
 
-class TwMentionAdmin(admin.ModelAdmin):
+class TwUserAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Tweet, TweetAdmin)
-admin.site.register(TwMention, TwMentionAdmin)
+admin.site.register(TwUser, TwUserAdmin)
